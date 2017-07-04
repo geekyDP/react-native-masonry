@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { View, Image, TouchableOpacity } from 'react-native';
 
+//geekyDP Updated to TouchableOpacity in order to avoid on press black overlay
+
 export default function Brick (props) {
   // Avoid margins for first element
   const image = (props.onPress) ? _getTouchableUnit(props, props.gutter) : _getImageTag(props, props.gutter);
