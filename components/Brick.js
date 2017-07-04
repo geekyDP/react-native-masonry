@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { View, Image, TouchableHighlight } from 'react-native';
+import { View, Image, TouchableOpacity } from 'react-native';
 
 export default function Brick (props) {
   // Avoid margins for first element
@@ -30,10 +30,10 @@ export function _getImageTag (image, gutter = 0) {
 // _getTouchableUnit :: Image, Number -> TouchableTag
 export function _getTouchableUnit (image, gutter = 0) {
   return (
-      <TouchableHighlight
+      <TouchableOpacity
          key={image.uri}
          onPress={() => image.onPress(image.data)}>
             { _getImageTag(image, gutter) }
-      </TouchableHighlight>
+      </TouchableOpacity>
   );
 }
